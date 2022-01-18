@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+</head>
+<body>
+    <h1 style="font-family: Lobster,monospace">Employee Registration</h1>
+    <hr>
+    <form th:action="@{/v1/employee/}" method="post" th:object="${employee}">
+        <label for="fn">Please Enter your First Name: </label>
+        <input type="text" th:field="*{firstName}" id="fn" required>
+        <br>
+        <label for="ln">Please Enter your Last Name: </label>
+        <input type="text" th:field="*{lastName}" id="ln" required>
+        <br>
+        <label for="email">Please Enter your Email</label>
+        <input type="email" th:field="*{email}" id="email" required>
+        <br>
+        <label for="department">Select Your Department</label>
+        <select th:field="*{department}" id="department">
+            <option value="IT">IT</option>
+            <option value="LAW">LAW</option>
+            <option value="TRANSPORTATION">TRANSPORTATION</option>
+            <option value="FOOD">FOOD</option>
+        </select>
+        <br>
+        <input type="submit" value="ADD">
+    </form>
+</body>
+</html>

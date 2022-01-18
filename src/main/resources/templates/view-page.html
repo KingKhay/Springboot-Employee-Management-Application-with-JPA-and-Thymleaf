@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Employee</title>
+</head>
+<body>
+    <img alt="a man smiling" th:src="@{/images/smile.jpg}" style="width: 70px; height: 50px;">
+    <br>
+    <p style="display: inline; font-size: 24px; font-family: monospace">First Name: </p><span th:text="${employee.firstName}"></span>
+    <br>
+    <p style="display: inline; font-size: 24px; font-family: monospace">Last Name: </p><span th:text="${employee.lastName}"></span>
+    <br>
+    <p style="display: inline; font-size: 24px; font-family: monospace">Email: </p><span th:text="${employee.email}"></span>
+    <br>
+    <p style="display: inline; font-size: 24px; font-family: monospace">Department: </p><span th:text="${employee.department}"></span>
+    <br>
+</body>
+</html>

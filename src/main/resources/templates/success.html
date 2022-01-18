@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SUCCESS</title>
+</head>
+<body>
+    <h3 style="display: inline;">Welcome to the Page </h3>
+    <h3 th:text="${employee.firstName}" style="display: inline;"></h3>
+    <form th:action="@{/v1/employee/}" method="get">
+        <input type="submit" value="Go Home">
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+    <h1 style="font-family: Lobster,monospace;">Employees</h1>
+    <hr>
+    <form th:action="@{/v1/employee/register}" method="get">
+        <input type="submit" value="ADD EMPLOYEE">
+    </form>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.email}"></td>
+                <td th:text="${employee.department}"></td>
+                <td>
+                    <a style="color: forestgreen; font-family: monospace;" th:href="@{/v1/employee/update(id=${employee.id})}">UPDATE</a>
+                    <a style="color: darkred; font-family: monospace;" th:href="@{/v1/employee/delete(id=${employee.id})}">DELETE</a>
+                    <a style="color: darkblue; font-family: monospace;" th:href="@{/v1/employee/view(id=${employee.id})}">VIEW</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
