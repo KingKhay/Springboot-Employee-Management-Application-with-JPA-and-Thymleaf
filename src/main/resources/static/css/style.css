@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 75px;
+    text-align: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main form{
+    margin-right: 75%;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-size: 18px;
+    font-family: monospace;
+}
+ion-icon{
+    font-size: 16px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.twitter{
+   color: #74a6f7;
+    padding: 0 10px 0 10px;
+}
+.facebook{
+    color:#000df7;
+    padding: 0 10px 0 10px;
+}
+.linkedin{
+    color:#007ab5;
+    padding: 0 10px 0 10px;
+}
